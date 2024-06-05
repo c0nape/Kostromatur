@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Сайт для туристов г. Кострома</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Кострома</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attractions.html">Достопримечательности</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="places.html">Интересные места</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="mt-5">Контакты</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Наш адрес:</h4>
+                    <p>ул. Лагерная, д. 17, г. Кострома</p>
+                    <h4>Телефон:</h4>
+                    <p>+7 (953) 644-56-52</p>
+                    <h4>Email:</h4>
+                    <p>CrewKren@ya.ru</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Мы на карте:</h4>
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <div class="container text-center">
+            <p>&copy; 2024 Кострома</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Скрипт для вставки интерактивной карты от Яндекса -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [57.768421, 40.926861], // Координаты центра карты
+                zoom: 13 // Уровень масштабирования
+            });
+
+            var myPlacemark = new ymaps.Placemark([57.768421, 40.926861], { // Координаты метки на карте
+                hintContent: 'Мы здесь!',
+                balloonContent: 'г. Кострома, ул. Примерная, д. 123'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+</html>

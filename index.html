@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт для туристов г. Кострома</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Кострома</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attractions.html">Достопримечательности</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="places.html">Интересные места</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="jumbotron text-center bg-video">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/rswfNopBU9Q?autoplay=1&loop=1&playlist=rswfNopBU9Q&mute=1&controls=0" frameborder="0" allow="autoplay"></iframe>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container text-white">
+                <h1 class="jumbotron-heading">Добро пожаловать в город Кострома</h1>
+                <p class="lead">Исследуйте красоту и историю этого удивительного города</p>
+                <p>
+                    <a href="attractions.html" class="btn btn-primary my-2">Посмотреть достопримечательности</a>
+                    <a href="places.html" class="btn btn-secondary my-2">Найти интересные места</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="kostroma-info bg-light text-center">
+            <div class="container">
+                <h2 class="text-primary">О городе Кострома</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>История города</h4>
+                        <p>Кострома — один из древнейших городов России, основанный в XII веке. Она расположена на берегах Волги и богата историческими событиями.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Культурное наследие</h4>
+                        <p>Город славится своими музеями, театрами и архитектурой. Суздальский кремль, монастыри и церкви привлекают множество туристов.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Природные красоты</h4>
+                        <p>Кроме исторических достопримечательностей, Кострома окружена прекрасными природными ландшафтами. Река Волга, леса и озера создают уникальную атмосферу.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Народные традиции</h4>
+                        <p>Кострома славится своим фольклором и народными традициями. Здесь можно познакомиться с уникальным русским костюмом и народными праздниками.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="container">
+        <h2 class="mt-5">Заявка на тур</h2>
+        <form action="script.php" method="post">
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Места, которые вы хотите посетить:</label><br>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place1" name="places[]" value="Набережная Волги">
+                    <label class="form-check-label" for="place1">Набережная Волги</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place2" name="places[]" value="Ипатьевский монастырь">
+                    <label class="form-check-label" for="place2">Ипатьевский монастырь</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place3" name="places[]" value="Памятник Ивану Сусанину">
+                    <label class="form-check-label" for="place3">Памятник Ивану Сусанину</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place4" name="places[]" value="Музей деревянного зодчества">
+                    <label class="form-check-label" for="place4">Музей деревянного зодчества</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place5" name="places[]" value="Пожарная каланча">
+                    <label class="form-check-label" for="place5">Пожарная каланча</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="place6" name="places[]" value="Торговые ряды">
+                    <label class="form-check-label" for="place6">Торговые ряды</label>
+                </div>
+                <!-- Добавьте дополнительные чекбоксы для других мест -->
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Кострома</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

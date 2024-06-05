@@ -1,0 +1,82 @@
+/* styles.css */
+
+/* Подключаем стили после стилей Bootstrap */
+/* Это позволит вашим стилям переопределить стили Bootstrap при необходимости */
+
+body {
+    padding-top: 0px; /* Фиксированная высота навигационного меню */
+}
+
+/* Задаем цвет фона навигационному меню */
+.navbar-light {
+    background-color: #6c757d; /* серый цвет для фона */
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #3a3a3ac5; /* серый цвет для фона */
+    color: #ffffff; /* белый цвет текста */
+}
+
+h2 {
+    color: #22588b; /* темно-зеленый цвет для заголовков */
+}
+
+h4 {
+    color: #6c757d; /* серый цвет для текста */
+}
+
+.bg-video {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Новые стили для серого прямоугольника и видео */
+.video-container {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 56.25%;
+    z-index: -100;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jumbotron {
+    padding: 120px 0;
+    margin-bottom: 0;
+}
+
+.kostroma-info {
+    background-color: #f8f9fa; /* светло-серый цвет для фона блока с информацией */
+    padding: 50px 0;
+}
+
+.kostroma-info h2 {
+    color: #22588b; /* темно-зеленый цвет для заголовков */
+}
+
+.kostroma-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #22588b; /* темно-зеленый цвет для ссылок */
+}
+
+.navbar-light .navbar-brand {
+    color: #000; /* белый цвет */
+}
+
